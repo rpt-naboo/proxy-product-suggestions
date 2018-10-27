@@ -8,6 +8,10 @@
     "dev": "nodemon --exec node server/app.js",
     "test-server": "NODE_ENV=test jest server/app.test.js --detectOpenHandles --forceExit"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rpt-naboo/proxy-product-suggestions.git"
+  },  
   "author": "Josh Chen",
   "license": "ISC",
   "dependencies": {

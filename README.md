@@ -28,5 +28,5 @@ To power up the database, we need to cd into server first.  `cd server`
 ## Seed data
 1. run `node libs/helpers/import-seed-data.js`
 
-#TODO
+# TODO
 Add another db (mongodb) to store and handle product similiarity scores.

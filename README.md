@@ -28,5 +28,18 @@ To power up the database, we need to cd into server first.  `cd server`
 ## Seed data
 1. run `node libs/helpers/import-seed-data.js`
 
+# Cluster / Load balancer with PM2
+## Installation
+`npm install pm2 -g`
+
+## Start load balancer
+`pm2 start ecosystem.config.js`
+
+## Stop load balancer
+`pm2 stop ecosystem.config.js`
+
+## Delete load balancer
+`pm2 delete ecosystem.config.js`
+
 # TODO
 Add another db (mongodb) to store and handle product similiarity scores.

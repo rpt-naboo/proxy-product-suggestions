@@ -2,7 +2,7 @@
 
 # Get start
 ## Server
-1. The server port is set to 3007.
+1. The server port is set to 8080.
 2. run `npm start` to start the server
 
 ## Endpoints

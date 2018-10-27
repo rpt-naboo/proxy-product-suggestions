@@ -1,0 +1,10 @@
+node_modules/
+bower_components/
+*.log
+.vscode/
+
+
+build/
+/dist
+.env
+*.DS_Store

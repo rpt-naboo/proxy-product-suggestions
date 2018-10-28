@@ -1,7 +1,6 @@
-'use strict';
-
-const db = require('../models')
 const _ = require('underscore');
+const stringSimilarity = require('string-similarity');
+const db = require('../models')
 
 const k = 5;
 
@@ -13,12 +12,14 @@ module.exports = {
         const n = products.length;
         var suggestions = []
         for(var i = 0; i < n; i++) {
-          var productId = products[i].id;          
-          for(var idx = 0; idx < k; idx++) {
-            let p = Math.floor(Math.random()*n);
-            if (i !== p) {
-              let suggestProductId = products[p].id;
-              suggestions.push({productId: productId, suggestProductId: suggestProductId})
+          var productId = products[i].id;  
+          var productName = products[i].name;          
+          for(var idx = 0; idx < n; idx++) {            
+            if (i !== idx) {
+              let suggestProductId = products[idx].id;
+              let suggestProductName = products[idx].name; 
+              let score = stringSimilarity.compareTwoStrings(productName, suggestProductName);
+              suggestions.push({productId: productId, suggestProductId: suggestProductId, score: score})
             }            
           }
         }

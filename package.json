@@ -11,7 +11,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rpt-naboo/proxy-product-suggestions.git"
-  },  
+  },
   "author": "Josh Chen",
   "license": "ISC",
   "dependencies": {
@@ -25,6 +25,7 @@
     "pg-hstore": "^2.3.2",
     "sequelize": "^4.41.0",
     "sequelize-cli": "^5.2.0",
+    "string-similarity": "^2.0.0",
     "supertest": "^3.3.0"
   }
 }

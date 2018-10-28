@@ -2,7 +2,8 @@
 module.exports = (sequelize, DataTypes) => {
   const Suggestion = sequelize.define('Suggestion', {
     productId: DataTypes.INTEGER,
-    suggestProductId: DataTypes.INTEGER
+    suggestProductId: DataTypes.INTEGER,
+    score: DataTypes.FLOAT
   }, {});
   Suggestion.associate = function(models) {
     // associations can be defined here

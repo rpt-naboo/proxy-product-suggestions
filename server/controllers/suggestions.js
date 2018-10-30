@@ -9,7 +9,7 @@ module.exports = {
   },
   get(req, res) {
     return Suggestion
-      .findAll({where: {productId: req.params.productId}})
+      .findAll({where: {productId: req.params.productId}, limit: 10, order: [['score','DESC']]})
       .then((suggestions) => {
         res.status(200).send(suggestions);
       })

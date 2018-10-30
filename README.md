@@ -41,5 +41,19 @@ To power up the database, we need to cd into server first.  `cd server`
 ## Delete load balancer
 `pm2 delete ecosystem.config.js`
 
+# Docker
+## Building a docker image
+`docker build -t proxy-suggestions .`
+
+## Running a Docker container
+### To see created images, run: 
+`docker images`
+
+### To run the container
+`docker run -p 80:8080 {image-id}`
+
+### To stop the container
+`docker stop {container-id}`
+
 # TODO
 Add another db (mongodb) to store and handle product similiarity scores.

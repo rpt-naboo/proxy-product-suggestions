@@ -16,6 +16,10 @@
     "dialect": "postgres"
   },
   "production": {
-    "use_env_variable": "DATABASE_URL"
+    "host": "nabooitemsuggestions.ce2dneemekr4.us-east-1.rds.amazonaws.com",
+    "username": "user",
+    "password": "password",
+    "port": 5432,
+    "dialect": "postgres"
   }
 }

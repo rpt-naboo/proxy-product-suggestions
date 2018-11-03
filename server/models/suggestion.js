@@ -5,12 +5,12 @@ module.exports = (sequelize, DataTypes) => {
     suggestProductId: DataTypes.INTEGER,
     score: DataTypes.FLOAT
   }, {});
-  // Suggestion.associate = function(models) {
-  //   // associations can be defined here
-  //   Suggestion.belongsTo(models.Product, {
-  //   	foreignKey: 'productId',
-  //   	onDelete: 'CASCADE',
-  //   })
-  // };
+  Suggestion.associate = function(models) {
+    // associations can be defined here
+    Suggestion.belongsTo(models.Product, {
+    	foreignKey: 'productId',
+    	onDelete: 'CASCADE',
+    })
+  };
   return Suggestion;
 };

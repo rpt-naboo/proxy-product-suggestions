@@ -14,6 +14,9 @@ run `npm run test-server`
 # Database
 To power up the database, we need to cd into server first.  `cd server`
 
+## Config env var
+`export DB_NAME=naboo_dev`
+
 ## Init DB
 1. run `sequelize db:create` to start the PG database
 2. run `sequelize db:migrate` for database migration 

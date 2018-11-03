@@ -2,7 +2,7 @@
   "development": {
     "username": null,
     "password": null,
-    "database": "naboo_dev",
+    "database": null,
     "host": "127.0.0.1",
     "port": 5432,
     "dialect": "postgres"

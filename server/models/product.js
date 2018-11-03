@@ -4,12 +4,12 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     imageUrl: DataTypes.STRING
   }, {});
-  Product.associate = function(models) {
-    // associations can be defined here
-    Product.hasMany(models.Suggestion, {
-    	foreignKey: 'productId',
-    	as: 'suggestions'
-    });
-  };
+  // Product.associate = function(models) {
+  //   // associations can be defined here
+  //   Product.hasMany(models.Suggestion, {
+  //   	foreignKey: 'productId',
+  //   	as: 'suggestions'
+  //   });
+  // };
   return Product;
 };

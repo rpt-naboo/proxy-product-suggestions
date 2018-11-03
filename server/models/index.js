@@ -7,7 +7,7 @@ const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
 const configs = require(__dirname + '/../config/config.js');
 const config = configs[env];
-console.log(config)
+console.log(env, config)
 // const config = require(__dirname + '/../config/config.json')[env];
 const db = {};
 

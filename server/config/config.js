@@ -18,10 +18,10 @@ module.exports = {
     dialect: 'postgres'
   },
   production: {
-    username: null,
-    password: null,
+    username: 'naboo',    
     database: process.env.DB_NAME,
-    host: '127.0.0.1',
+    password: process.env.DB_PASSWORD,
+    host: process.env.DB_HOST,
     port: 5432,
     dialect: 'postgres'    
   }

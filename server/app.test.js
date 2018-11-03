@@ -10,7 +10,7 @@ describe('Suggestion GET API Test', () => {
       request(app).get('/api/suggestions/products/1')
         .end((err, res) => {
           expect(res.statusCode).to.equal(200);
-          expect(res.body.length).to.equal(5);
+          expect(res.body.length).to.equal(12);
           done();
         });
     });

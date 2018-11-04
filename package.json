@@ -7,8 +7,9 @@
     "start": "node server/app.js",
     "dev": "nodemon --exec node server/app.js",
     "test-server": "NODE_ENV=test jest server/app.test.js --detectOpenHandles --forceExit",
-    "db:migration":"cd server && sequelize db:migrate",
-    "db:init:seed":"cd server && sequelize db:migrate && sequelize db:seed:all"
+    "db:migrate":"cd server && sequelize db:migrate",
+    "db:seed:all":"cd server && sequelize db:seed:all",
+    "db:seed:undo:all":"cd server && sequelize db:seed:undo:all"
   },
   "repository": {
     "type": "git",

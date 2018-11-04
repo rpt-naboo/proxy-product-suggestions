@@ -58,5 +58,12 @@ To power up the database, we need to cd into server first.  `cd server`
 ### To stop the container
 `docker stop {container-id}`
 
+# Production DB
+## Create table on Production DB
+`docker exec -it {docker_container_id} /bin/sh -c 'npm run db:migrate'`
+
+## Seed the db
+`docker exec -it {docker_container_id} /bin/sh -c 'npm run db:seed:all'`
+
 # TODO
 Add another db (mongodb) to store and handle product similiarity scores.

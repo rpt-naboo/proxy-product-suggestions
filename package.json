@@ -7,9 +7,11 @@
     "start": "node server/app.js",
     "dev": "nodemon --exec node server/app.js",
     "test-server": "NODE_ENV=test jest server/app.test.js --detectOpenHandles --forceExit",
-    "db:migrate":"cd server && sequelize db:migrate",
-    "db:seed:all":"cd server && sequelize db:seed:all",
-    "db:seed:undo:all":"cd server && sequelize db:seed:undo:all"
+    "db:migrate": "cd server && sequelize db:migrate",
+    "db:seed:all": "cd server && sequelize db:seed:all",
+    "db:seed:undo:all": "cd server && sequelize db:seed:undo:all",
+    "restart": "pm2 startOrRestart ecosystem.config.js",
+    "deploy": "pm2 deploy ecosystem.config.js production"
   },
   "repository": {
     "type": "git",
@@ -30,5 +32,8 @@
     "sequelize-cli": "^5.2.0",
     "string-similarity": "^2.0.0",
     "supertest": "^3.3.0"
+  },
+  "devDependencies": {
+    "pm2": "^3.2.2"
   }
 }

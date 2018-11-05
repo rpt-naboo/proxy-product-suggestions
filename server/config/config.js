@@ -4,7 +4,7 @@ module.exports = {
   development: {
     username: null,
     password: null,
-    database: process.env.DB_NAME,
+    database: 'naboo_dev',
     host: '127.0.0.1',
     port: 5432,
     dialect: 'postgres'
@@ -12,7 +12,7 @@ module.exports = {
   test: {
     username: null,
     password: null,
-    database: process.env.DB_NAME,
+    database: 'naboo_dev',
     host: '127.0.0.1',
     port: 5432,
     dialect: 'postgres'

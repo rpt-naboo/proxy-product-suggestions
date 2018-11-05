@@ -65,5 +65,8 @@ To power up the database, we need to cd into server first.  `cd server`
 ## Seed the db
 `docker exec -it {docker_container_id} /bin/sh -c 'npm run db:seed:all'`
 
+
+## Deployment with PM2 to EC2
+
 # TODO
 Add another db (mongodb) to store and handle product similiarity scores.

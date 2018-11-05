@@ -71,5 +71,8 @@ To power up the database, we need to cd into server first.  `cd server`
 ### SSH into the server
 `ssh -i ~/.ssh/rpt-08-naboo.pem  ubuntu@ec2-13-56-227-30.us-west-1.compute.amazonaws.com`
 
+### deploy the project from local
+`npm i pm2 --save-dev`
+
 # TODO
 Add another db (mongodb) to store and handle product similiarity scores.

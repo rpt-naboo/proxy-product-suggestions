@@ -9,4 +9,3 @@ build/
 .env
 *.DS_Store
 Dockerfile
-ecosystem.config.js

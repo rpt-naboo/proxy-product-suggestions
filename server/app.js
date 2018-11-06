@@ -18,7 +18,7 @@ const port = 3000;
 
 require('./routes')(app);
 app.get('*', (req, res) => res.status(200).send({
-  message: `Welcome to the beginning of naboo. env as ${process.env.NODE_ENV}`,
+  message: `Welcome to the beginning of naboo. env as ${process.env.NODE_ENV}, db name ${process.env.DB_NAME}`,
 }));
 
 if (process.env.NODE_ENV !== 'test') {

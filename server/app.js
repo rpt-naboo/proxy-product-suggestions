@@ -18,7 +18,7 @@ const port = 3000;
 
 require('./routes')(app);
 app.get('*', (req, res) => res.status(200).send({
-  message: 'Welcome to the beginning of naboo.',
+  message: `Welcome to the beginning of naboo. env as ${process.env.NODE_ENV}`,
 }));
 
 if (process.env.NODE_ENV !== 'test') {

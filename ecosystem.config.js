@@ -1,10 +1,7 @@
 module.exports = {
   apps: [{
     name: 'proxy-product-suggestions',
-    script: "server/app.js",
-    env: {
-      "NODE_ENV": "production"
-    }
+    script: "server/app.js"
   }],
   deploy: {
     production: {

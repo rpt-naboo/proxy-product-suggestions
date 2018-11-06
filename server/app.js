@@ -16,7 +16,7 @@ app.use((req, res, next) => {
 
 const port = 3000;
 
-// require('./routes')(app);
+require('./routes')(app);
 app.get('*', (req, res) => res.status(200).send({
   message: 'Welcome to the beginning of naboo.',
 }));

@@ -1,6 +1,6 @@
 module.exports = {
   apps: [{
-  	name: 'rpt-08-naboo',
+  	name: 'proxy-product-suggestions',
     script: "server/app.js"
   }],
   deploy: {

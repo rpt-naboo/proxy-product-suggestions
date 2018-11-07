@@ -14,7 +14,7 @@ app.use((req, res, next) => {
 })
 
 
-const port = 8080;
+const port = 3000;
 
 require('./routes')(app);
 app.get('*', (req, res) => res.status(200).send({

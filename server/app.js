@@ -13,8 +13,10 @@ app.use((req, res, next) => {
   next();
 })
 
-
-const port = 3000;
+let port = 8080;
+if (process.env.NODE_ENV === 'production') {
+	port = 3000;
+}
 
 require('./routes')(app);
 app.get('*', (req, res) => res.status(200).send({

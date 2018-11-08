@@ -6,7 +6,7 @@ module.exports = {
       "NODE_ENV": "production",
       "DB_NAME": "naboo",
       "DB_USER_NAME": "naboo",
-      "DB_HOST": "naboo.ce2dneemekr4.us-east-1.rds.amazonaws.com",
+      "DB_HOST": "naboo-ms.c7wabaeosydd.us-west-1.rds.amazonaws.com",
       "DB_PASSWORD": "rpt-08-naboo-ms"
     }
   }],

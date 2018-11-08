@@ -13,7 +13,7 @@ app.use((req, res, next) => {
   next();
 })
 
-let port = 8080;
+let port = 4201;
 if (process.env.NODE_ENV === 'production') {
 	port = 3000;
 }

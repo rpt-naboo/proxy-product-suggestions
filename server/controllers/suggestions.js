@@ -9,6 +9,8 @@ module.exports = {
       .catch(error => res.status(400).send(error));
   },
   get(req, res) {
+    const postBody = req.body;
+    
     return Suggestion
       .findAll({where: {productId: req.params.productId}, limit: 12, order: [['score','DESC']]})
       .then((suggestions) => {

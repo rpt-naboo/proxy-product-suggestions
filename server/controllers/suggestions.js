@@ -9,12 +9,29 @@ module.exports = {
       .catch(error => res.status(400).send(error));
   },
   get(req, res) {
-    const postBody = req.body;
+    const postBody = req.query;
+    const itemPerPage = Number(postBody.itemPerPage);
+    const limit = Number(postBody.limit);
+    const currentPageNumber = Number(postBody.currentPageNumber);
+    const totalPages = Math.ceil(limit / itemPerPage);
+    const offset = (currentPageNumber - 1) * itemPerPage;
     
     return Suggestion
-      .findAll({where: {productId: req.params.productId}, limit: 12, order: [['score','DESC']]})
+      .findAll({where: {productId: req.params.productId}
+        , offset: offset
+        , limit: itemPerPage
+        , order: [['score','DESC']]})
       .then((suggestions) => {
-        res.status(200).send(suggestions);
+        suggestions.length === itemPerPage ? nextPage = currentPageNumber + 1 : nextPage = 0;
+        offset > 0 ? previousPage = currentPageNumber - 1 : previousPage = 0;
+        const result  = {
+          previousPage: previousPage,
+          nextPage: nextPage,
+          itemPerPage: itemPerPage,
+          suggestions: suggestions
+        }
+
+        res.status(200).send(result);
       })
       .catch(error => res.status(400).send(error));
   },

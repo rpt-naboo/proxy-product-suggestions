@@ -11,9 +11,7 @@ module.exports = {
   get(req, res) {
     const postBody = req.query;
     const itemPerPage = Number(postBody.itemPerPage);
-    const limit = Number(postBody.limit);
     const currentPageNumber = Number(postBody.currentPageNumber);
-    const totalPages = Math.ceil(limit / itemPerPage);
     const offset = (currentPageNumber - 1) * itemPerPage;
     
     return Suggestion

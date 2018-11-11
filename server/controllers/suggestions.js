@@ -10,8 +10,9 @@ module.exports = {
   },
   get(req, res) {
     const postBody = req.query;
-    const itemPerPage = Number(postBody.itemPerPage);
-    const currentPageNumber = Number(postBody.currentPageNumber);
+    postBody.itemPerPage ? itemPerPage = Number(postBody.itemPerPage) : itemPerPage = 4;
+    postBody.currentPageNumber ? currentPageNumber = Number(postBody.currentPageNumber) : currentPageNumber = 1;
+    //const currentPageNumber = Number(postBody.currentPageNumber);    
     const offset = (currentPageNumber - 1) * itemPerPage;
     
     return Suggestion

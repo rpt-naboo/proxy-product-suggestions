@@ -32,15 +32,14 @@ module.exports = {
         res.status(200).send(result);
       })
       .catch(error => res.status(400).send(error));
-  },
+  },  
   create(req, res) {
-    const postBody = req.body;    
+    const postBody = req.body;        
     const product1_id = postBody.product1_id;
     const product2_id = postBody.product2_id;
     const product1_text = postBody.product1_text;
     const product2_text = postBody.product2_text;        
     const productsSimilarity = productSimilarity(product1_id, product1_text, product2_id, product2_text);
-
     Suggestion.bulkCreate(productsSimilarity)
     .then(() => {
       res.status(200).send('created new items');
